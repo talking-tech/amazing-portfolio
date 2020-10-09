@@ -1,8 +1,13 @@
+html{
+    height: -webkit-fill-available;
+}
+
 body {
   margin-top: 0;
   margin-left: 0;
   padding-top: 0;
   font-family: "Chilanka", cursive;
+  height: -webkit-fill-available;
 }
 .header {
   padding-top: 20px;
@@ -84,9 +89,13 @@ body {
   font-size: 42px;
 }
 
+.typewriter{
+    padding-top: 20px;
+}
 .typewriter p{
     display: inline-block;
 }
+
 .typewriter p {
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   border-right: 0.2em solid orange; /* The typwriter cursor */
