@@ -13,27 +13,27 @@ body {
 
 @keyframes example {
   0% {
-    color: black;
+    color:black;
+    font-weight: 700;
   }
   25% {
-    color: lightgray;
+    font-weight: 300;
   }
   50% {
-    color: black;
+    font-weight: 700;
   }
   75% {
-    color: lightgray;
+    font-weight: 300;
   }
   100% {
-    color: black;
+    font-weight: 700;
   }
 }
 
 .navbar-brand {
   font-size: 32px;
-  animation: ease-in-out;
   animation-name: example;
-  animation-duration: 2s;
+  animation-duration: 1s;
   animation-iteration-count: infinite;
 }
 
@@ -55,6 +55,7 @@ body {
   min-height: 100vh;
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
   padding: 250px 0 250px;
   overflow: hidden;
   z-index: -2;
