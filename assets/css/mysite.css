@@ -1,5 +1,6 @@
 html{
     height: -webkit-fill-available;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -9,8 +10,17 @@ body {
   font-family: "Chilanka", cursive;
   height: -webkit-fill-available;
 }
+
+section {
+    /* Snap align start. */
+    scroll-snap-align: start;
+  }
+
 .header {
   padding-top: 20px;
+  margin:0px;
+  padding-left: 0px;
+  padding-right: 0px;
   position: absolute;
   position: fixed;
   z-index: 2;
@@ -36,6 +46,8 @@ body {
 }
 
 .navbar-brand {
+padding:.1em;
+margin-left:1em;
   font-size: 32px;
   animation-name: example;
   animation-duration: 1s;
@@ -56,8 +68,8 @@ body {
 
 .banner {
   position: relative;
-  background: url("../../bg.jpg");
   min-height: 100vh;
+  background: url("../../bg.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -66,7 +78,7 @@ body {
   z-index: -2;
 }
 
-.banner .clouds {
+.banner .clouds,.about .clouds {
   position: absolute;
   top: 0;
   left: 0;
@@ -74,7 +86,8 @@ body {
   height: 100%;
   background: url("../../cloud.png");
   background-attachment: fixed;
-  animation: animate 60s linear infinite;
+  animation: animate 500s linear infinite;
+  background-blend-mode: multiply;
 }
 @keyframes animate {
   0% {
@@ -128,6 +141,20 @@ body {
 
 
 .about{
-    padding-top:100px;
-    min-height: 100vh;
+  position: relative;
+  min-height: 100vh;
+  background: url("../../bg3.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 100px 0 250px;
+  overflow: hidden;
+  color: white;
 }
+
+
+.sticky-top.scrolled {
+    background-color: rgba(43, 43, 43, 0.80) !important;
+    transition: background-color 1s linear;
+  }
+
