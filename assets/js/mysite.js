@@ -1,18 +1,19 @@
 $(document).ready(function(){
     
     // Swapping Roles In Header
-    setInterval(swapRoles,2000);
-    var masterroles = ["Code Enthusiast","Coffee Lover","Web Developer"]; 
+    setInterval(swapRoles,1000);
+    var masterroles = ["Designer", "Night Owl","Code Enthusiast", "Coffee Lover","Web Developer"]; 
     var count = 0;
     function swapRoles(){
-       $(".roles").fadeOut("slow").text(masterroles[count++ % masterroles.length]).fadeIn("slow");
+        $('.roles').fadeOut("fast", function(){
+          $(this).html('↓<br> { '+ masterroles[count++ % masterroles.length] +' }') .fadeIn("fast");
+        });
     };
     
     // Scrolling Navbar
     $(window).scroll(function(){
-        $('nav').toggleClass('scrolled', $(this).scrollTop() > 500);
-        $('nav').toggleClass('navbar-dark', $(this).scrollTop() > 500);
+        $('nav').toggleClass('scrolled', $(this).scrollTop() > 300);
+        $('nav').toggleClass('navbar-dark', $(this).scrollTop() >300);
     });
     
   });
-  

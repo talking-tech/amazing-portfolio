@@ -11,52 +11,28 @@ body {
   height: -webkit-fill-available;
 }
 
-section {
-  /* Snap align start. */
-  scroll-snap-align: start;
-}
-
 .header {
-  padding-top: 20px;
   margin: 0px;
   padding-left: 0px;
   padding-right: 0px;
   position: absolute;
   position: fixed;
-  z-index: 2;
+  z-index: 2000;
 }
-
-@keyframes example {
-  0% {
-    color: black;
-    font-weight: 700;
-  }
-  25% {
-    font-weight: 300;
-  }
-  50% {
-    font-weight: 700;
-  }
-  75% {
-    font-weight: 300;
-  }
-  100% {
-    font-weight: 700;
-  }
-}
-
+/*
+.navbar {
+  background-color: rgba(255, 255, 255, 0.8);
+} */
 .navbar-brand {
-  padding: 0.1em;
-  margin-left: 1em;
-  font-size: 32px;
-  animation-name: example;
-  animation-duration: 1s;
-  animation-iteration-count: infinite;
+  padding: 0.5rem;
+  font-size: 2rem;
+  font-weight: 700;
+  color: black;
 }
 
 .navbar-nav {
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 1rem;
+  font-weight: 600;
   text-align: justify;
   position: relative;
 }
@@ -66,20 +42,30 @@ section {
   position: relative;
 }
 
-.banner {
+.sticky-top.scrolled {
+  background-color: rgba(43, 43, 43, 0.8) !important;
+  transition: background-color 0.25s linear;
+}
+
+section {
+  scroll-snap-align: start;
   position: relative;
+  min-width: 100vw;
   min-height: 100vh;
-  background: url("../img/bg.jpg");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  padding: 250px 0 250px;
+  padding-top: 250px;
   overflow: hidden;
+}
+
+.background{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;  
   z-index: -2;
 }
 
-.banner .clouds,
-.about .clouds {
+.clouds {
   position: absolute;
   top: 0;
   left: 0;
@@ -87,77 +73,104 @@ section {
   height: 100%;
   background: url("../img/cloud.png");
   background-attachment: fixed;
-  animation: animate 500s linear infinite;
+  animation: animatecloud 20s linear infinite;
   background-blend-mode: multiply;
+  z-index: -1;
 }
-@keyframes animate {
+.banner .background{
+  background: url("../img/bg6.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.about .background{
+  background: url("../img/bg3.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.content{
+  position: absolute;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.roles{
+  font-size: 3rem;
+  color:rgb(60, 149, 165);
+}
+
+.socials a, .socials a:link{
+  text-decoration: none;
+  display: inline-block;
+  border: black 1px solid;
+  padding:.5rem;
+  font-size: 1rem;
+  width:2rem;
+  height:2rem;
+  border-radius: 50%;
+  color: black;
+  margin-left: .5rem;
+  margin-right: .5rem;
+  margin-top:2rem;
+  transition: all .25s linear;
+  transform: scale(1);
+  
+}
+
+.socials a:hover{
+  background-color: rgb(60, 149, 165);
+  color: white;
+  transform: scale(1.25) translateY( -.25rem);
+  
+}
+
+.scrolldown a{
+  text-decoration: none;
+  display: inline-block;
+  border: black .1rem solid;
+  padding:.25rem;
+  font-size: .75rem;
+  width:2rem;
+  height:3rem;
+  border-radius: 35%;
+  border-bottom-left-radius: 40%;
+  border-bottom-right-radius: 40%;
+  color: black;
+  margin-top:2rem;
+  transition: all .25s linear;
+  transform: scale(.5);
+  animation: scrolldn 1s infinite;
+}
+.scrolldown a:hover{
+  transform: scale(.75);
+  background-color: brown;
+  color: white;
+}
+
+@keyframes scrolldn{
+  0%{
+    padding-top: .25rem;
+  }
+  50%{
+    padding-top: 1.5rem;
+  }
+  100%{
+    padding-top: .25rem;
+  }
+}
+
+
+
+
+
+
+/* Animations */
+@keyframes animatecloud {
   0% {
     background-position: 0px;
   }
   100% {
     background-position: -5440px;
   }
-}
-
-.intro {
-  font-size: 42px;
-}
-
-.typewriter {
-  padding-top: 20px;
-}
-.typewriter p {
-  display: inline-block;
-}
-
-.typewriter p {
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: 0.2em solid orange; /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: 0.15em; /* Adjust as needed */
-  animation:  typing 2s steps(40) infinite, blink-caret 0.25s step-end infinite;
-}
-
-/* The typing effect */ 
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-/* The typewriter cursor effect */
-@keyframes blink-caret {
-  from,
-  to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: orange;
-  }
-}
-
-.about {
-  position: relative;
-  min-height: 100vh;
-  background: url("../img/bg3.jpg");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  padding: 100px 0 250px;
-  overflow: hidden;
-  color: white;
-}
-
-.about .container{
-  color: rgba(0,0,0,.5);
-}
-
-.sticky-top.scrolled {
-  background-color: rgba(43, 43, 43, 0.8) !important;
-  margin-top: -20px;
-  transition: margin-top background-color 10s linear;
 }
