@@ -1,14 +1,11 @@
 $(document).ready(function(){
     
     // Swapping Roles In Header
-    setInterval(swapRoles,1000);
-    var masterroles = ["Student", "VITian", "Baller","Toastmaster","Reader","Web Developer"]; 
+    setInterval(swapRoles,2000);
+    var masterroles = ["Code Enthusiast","Coffee Lover","Web Developer"]; 
     var count = 0;
     function swapRoles(){
-        $('.roles').fadeOut("fast", function(){
-          $(this).text(masterroles[count++ % masterroles.length]);
-          $(this).fadeIn("fast");
-        });
+       $(".roles").fadeOut("slow").text(masterroles[count++ % masterroles.length]).fadeIn("slow");
     };
     
     // Scrolling Navbar

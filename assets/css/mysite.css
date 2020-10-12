@@ -116,11 +116,10 @@ section {
   white-space: nowrap; /* Keeps the content on a single line */
   margin: auto; /* Gives that scrolling effect as the typing happens */
   letter-spacing: 0.15em; /* Adjust as needed */
-  animation: /* typing 1s steps(40) infinite,*/ blink-caret 0.25s step-end
-    infinite;
+  animation:  typing 2s steps(40) infinite, blink-caret 0.25s step-end infinite;
 }
 
-/* The typing effect 
+/* The typing effect */ 
 @keyframes typing {
   from {
     width: 0;
@@ -129,7 +128,7 @@ section {
     width: 100%;
   }
 }
-*/
+
 /* The typewriter cursor effect */
 @keyframes blink-caret {
   from,
@@ -151,6 +150,10 @@ section {
   padding: 100px 0 250px;
   overflow: hidden;
   color: white;
+}
+
+.about .container{
+  color: rgba(0,0,0,.5);
 }
 
 .sticky-top.scrolled {
