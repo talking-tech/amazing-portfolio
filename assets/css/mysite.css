@@ -1,6 +1,6 @@
-html{
-    height: -webkit-fill-available;
-    scroll-behavior: smooth;
+html {
+  height: -webkit-fill-available;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -12,13 +12,13 @@ body {
 }
 
 section {
-    /* Snap align start. */
-    scroll-snap-align: start;
-  }
+  /* Snap align start. */
+  scroll-snap-align: start;
+}
 
 .header {
   padding-top: 20px;
-  margin:0px;
+  margin: 0px;
   padding-left: 0px;
   padding-right: 0px;
   position: absolute;
@@ -28,7 +28,7 @@ section {
 
 @keyframes example {
   0% {
-    color:black;
+    color: black;
     font-weight: 700;
   }
   25% {
@@ -46,8 +46,8 @@ section {
 }
 
 .navbar-brand {
-padding:.1em;
-margin-left:1em;
+  padding: 0.1em;
+  margin-left: 1em;
   font-size: 32px;
   animation-name: example;
   animation-duration: 1s;
@@ -78,7 +78,8 @@ margin-left:1em;
   z-index: -2;
 }
 
-.banner .clouds,.about .clouds {
+.banner .clouds,
+.about .clouds {
   position: absolute;
   top: 0;
   left: 0;
@@ -102,11 +103,11 @@ margin-left:1em;
   font-size: 42px;
 }
 
-.typewriter{
-    padding-top: 20px;
+.typewriter {
+  padding-top: 20px;
 }
-.typewriter p{
-    display: inline-block;
+.typewriter p {
+  display: inline-block;
 }
 
 .typewriter p {
@@ -115,7 +116,8 @@ margin-left:1em;
   white-space: nowrap; /* Keeps the content on a single line */
   margin: auto; /* Gives that scrolling effect as the typing happens */
   letter-spacing: 0.15em; /* Adjust as needed */
-  animation: /* typing 1s steps(40) infinite,*/ blink-caret 0.25s step-end infinite; 
+  animation: /* typing 1s steps(40) infinite,*/ blink-caret 0.25s step-end
+    infinite;
 }
 
 /* The typing effect 
@@ -139,8 +141,7 @@ margin-left:1em;
   }
 }
 
-
-.about{
+.about {
   position: relative;
   min-height: 100vh;
   background: url("../img/bg3.jpg");
@@ -152,9 +153,8 @@ margin-left:1em;
   color: white;
 }
 
-
 .sticky-top.scrolled {
-    background-color: rgba(43, 43, 43, 0.80) !important;
-    transition: background-color 1s linear;
-  }
-
+  background-color: rgba(43, 43, 43, 0.8) !important;
+  margin-top: -20px;
+  transition: margin-top background-color 10s linear;
+}
