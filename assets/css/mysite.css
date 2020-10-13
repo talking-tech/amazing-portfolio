@@ -14,7 +14,6 @@ body {
 div#preloader {
   position: absolute;
   left: -9999px;
-  top: -9999px;
 }
 
 div#preloader img {

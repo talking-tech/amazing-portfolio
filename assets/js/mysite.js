@@ -12,8 +12,8 @@ $(document).ready(function(){
     
     // Scrolling Navbar
     $(window).scroll(function(){
-        $('nav').toggleClass('scrolled', $(this).scrollTop() > 300);
-        $('nav').toggleClass('navbar-dark', $(this).scrollTop() >300);
+        $('nav').toggleClass('scrolled', $(this).scrollTop() > 1300);
+        $('nav').toggleClass('navbar-dark', $(this).scrollTop() >1300);
     });
     
   });
