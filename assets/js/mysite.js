@@ -1,12 +1,12 @@
 $(document).ready(function(){
     
     // Swapping Roles In Header
-    setInterval(swapRoles,1000);
+    setInterval(swapRoles,2000);
     var masterroles = ["Business Analyst", "Marketing Stratergist", "Team Player", "Web Developer"]; 
     var count = 0;
     function swapRoles(){
-        $('.roles').fadeOut("fast", function(){
-          $(this).html('↓<br> { '+ masterroles[count++ % masterroles.length] +' }') .fadeIn("fast");
+        $('.roles').fadeOut("slow", function(){
+          $(this).html(masterroles[count++ % masterroles.length]) .fadeIn("slow");
         });
     };
     
