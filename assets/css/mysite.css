@@ -46,10 +46,13 @@ div#preloader img {
   text-align: justify;
   position: relative;
 }
-.nav-item {
+.nav-item a,.nav-item a:link{
+  display: inline-block;
   letter-spacing: 0.15em;
   margin-left: 20px;
   position: relative;
+  color: rgba(43, 43, 43, 0.8);
+  
 }
 
 .sticky-top.scrolled {
@@ -110,7 +113,7 @@ section {
   display: inline-block;
   font-size: 1.75rem;
   font-weight: 700;
-  font-family: sans-serif;
+  /* font-family: sans-serif; */
   color:rgb(60, 149, 165);
   text-transform: uppercase;
   text-align:center;
@@ -128,18 +131,17 @@ section {
   margin-top: 2rem;
 }
 
-@media screen and (max-width: 400px){
-  .intro{
-    translate: scale(.5);
-  }
-}
+
 
 .socials{
   display:block;
   position: fixed;
   right: .5rem;
-  height:50vh;
+  /*height:50vh;*/
   top:25%;
+  background-color: rgba(0,0,0,.15);
+  border-radius: 25px;
+  z-index: 1000;
 }
 
 .socials a,
@@ -158,6 +160,7 @@ section {
   margin-top: 1rem;
   transition: all 0.5s linear;
   transform: scale(1);
+  margin-bottom: 1rem;
 }
 
 .socials a:hover {
@@ -165,7 +168,7 @@ section {
   color: white;
   transform: scale(1.5);
 }
-/*
+
 .scrolldown a {
   text-decoration: none;
   display: inline-block;
@@ -188,7 +191,7 @@ section {
   background-color: brown;
   color: white;
 }
-*/
+
 @keyframes scrolldn {
   0% {
     padding-top: 0.25rem;
@@ -201,6 +204,22 @@ section {
   }
 }
 
+/* About Section */
+
+.about{
+  font-size: 2rem;
+  
+}
+.about .content .portrait img{
+  height:60vh; width:auto; border-right: 10px solid brown; 
+}
+
+.about .content p{
+  text-align: left;
+  color: rgb(60, 149, 165);
+}
+
+
 /* Animations */
 @keyframes animatecloud {
   0% {
@@ -208,5 +227,11 @@ section {
   }
   100% {
     background-position: -5440px;
+  }
+}
+
+@media screen and (max-width: 400px){
+  .intro{
+    translate: scale(.5);
   }
 }
